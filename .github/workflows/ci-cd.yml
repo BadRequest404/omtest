@@ -25,6 +25,7 @@ jobs:
           cd frontend
           npm install
           npm install axios
+          npm install @vue/cli -g
 
       - name: Run Frontend Tests
         run: |
