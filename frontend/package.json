@@ -9,12 +9,12 @@
     "test": "vitest --config vitest.config.js"
   },
   "dependencies": {
+    "@vue/cli-service": "~5.0.0",
     "@vue/test-utils": "^2.4.6",
+    "axios": "^1.8.2",
     "vitest": "^3.0.8",
     "vue": "^3.2.13",
-    "@vue/cli-service": "~5.0.0",
-    "vue-router": "^4.0.3",
-    "axios": "^1.8.2"
+    "vue-router": "^4.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
