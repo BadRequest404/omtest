@@ -1,40 +1,105 @@
 # Flag Explorer App
 
-A modern application that allows users to explore country flags and details.
+## Overview
+The **Flag Explorer App** is a web-based application that allows users to browse country flags and view details such as the country's name, population, and capital. It is built using modern software development best practices, including frontend-backend integration, automated testing, and CI/CD pipeline implementation.
 
-## Project Structure
+## Technologies Used
+- **Frontend:** Vue.js
+- **Backend:** Java (Spring Boot)
+- **API Source:** [REST Countries API](https://restcountries.com/v3.1/all)
+- **Testing Frameworks:** Vitest, Vue Test Utils (Frontend), JUnit (Backend)
+- **CI/CD:** GitHub Actions
 
-This project follows Clean Architecture principles with clear separation of concerns:
+## Features
+### Frontend
+✅ Home screen displaying all country flags in a responsive grid layout.  
+✅ Detail screen showing country name, population, and capital when a flag is clicked.  
+✅ Fully tested components with unit and integration tests.
 
-- `controller`: REST API endpoints
-- `service`: Business logic
-- `model`: Data entities
-- `exception`: Custom exception handling
+### Backend
+✅ Exposes an API endpoint to retrieve a list of countries.  
+✅ Supports querying by country name for additional details.  
+✅ Includes unit and integration tests.
 
-## Getting Started
+### CI/CD
+✅ Automated tests for both frontend and backend.  
+✅ Build pipeline for frontend and backend.  
+✅ GitHub Actions workflow for continuous integration.
 
-### Prerequisites
+## Installation & Setup
 
-- Java 17 or higher
+### **Prerequisites**
+- Node.js (18.x or later)
+- Java (JDK 17 or later)
 - Maven
+- Git
 
-### Running the Application
+### **Clone the Repository**
+```sh
+git clone <repository-url>
+cd flag-explorer-app
+```
 
-1. Clone the repository
-2. Navigate to the project directory
-3. Run: `mvn spring-boot:run`
-4. The API will be available at: `http://localhost:8080`
+### **Frontend Setup**
+```sh
+cd frontend
+npm install
+npm run dev
+```
+Visit `http://localhost:5173/` in your browser.
 
-### API Endpoints
-
-- `GET /countries` - Get a list of all countries
-- `GET /countries/{name}` - Get details about a specific country
+### **Backend Setup**
+```sh
+cd backend
+mvn spring-boot:run
+```
+Backend runs on `http://localhost:8080/`.
 
 ## Running Tests
+### **Frontend Tests**
+```sh
+cd frontend
+npm test
+```
+### **Backend Tests**
+```sh
+cd backend
+mvn test
+```
 
-Run: `mvn test`
+## Deployment & CI/CD
+The project includes a GitHub Actions workflow for CI/CD:
+- **On push to `main` branch:**
+    - Runs tests for frontend and backend.
+    - Builds the application.
+    - Packages frontend and backend for deployment.
 
-## Future Enhancements
+### **Manual Build Commands**
+If you want to manually build and package the project:
+```sh
+cd frontend
+npm run build
+```
+```sh
+cd backend
+mvn package
+```
 
-- Frontend implementation with React (Part 2)
-- Pipeline integration for automated deployment (Part 3)
+## Directory Structure
+```
+flag-explorer-app/
+│── backend/               # Spring Boot Backend API
+│── frontend/              # Vue.js Frontend
+│── .github/workflows/     # CI/CD Pipeline Configuration
+│── README.md              # Documentation
+│── .gitignore             # Git Ignore File
+```
+
+## Submission Instructions
+1. Ensure all tests pass locally and in GitHub Actions.
+2. Push the latest changes to GitHub.
+3. Share the **GitHub repository link** for submission.
+
+## License
+This project is open-source and licensed under the MIT License.
+
