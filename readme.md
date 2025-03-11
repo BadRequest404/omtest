@@ -44,16 +44,16 @@ cd flag-explorer-app
 ```sh
 cd frontend
 npm install
-npm run dev
+npm run serve
 ```
-Visit `http://localhost:5173/` in your browser.
+Visit `http://localhost:8080/` in your browser.
 
 ### **Backend Setup**
 ```sh
 cd backend
 mvn spring-boot:run
 ```
-Backend runs on `http://localhost:8080/`.
+Backend runs on `http://localhost:8081/`.
 
 ## Running Tests
 ### **Frontend Tests**
@@ -94,11 +94,6 @@ flag-explorer-app/
 │── README.md              # Documentation
 │── .gitignore             # Git Ignore File
 ```
-
-## Submission Instructions
-1. Ensure all tests pass locally and in GitHub Actions.
-2. Push the latest changes to GitHub.
-3. Share the **GitHub repository link** for submission.
 
 ## License
 This project is open-source and licensed under the MIT License.
