@@ -24,6 +24,7 @@ jobs:
         run: |
           cd frontend
           npm install
+          npm install axios
 
       - name: Run Frontend Tests
         run: |
